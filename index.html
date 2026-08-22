@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D'Royals Travels &amp; Tours — Flights, Hotels &amp; Holiday Packages</title>
+<meta name="description" content="D'Royals Travels & Tours — book flights, hotels, holiday packages and visa support from Lagos, Nigeria to the world.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="index.html">
+        <div class="seal"><span>DR</span></div>
+        <div>
+          <div class="brand-name">D'<em>Royals</em></div>
+          <span class="brand-sub">Travels &amp; Tours</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="flights.html">Flights</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="packages.html">Packages</a>
+        <a href="visa.html">Visa</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="tel:+2348012345678" class="signin">+234 801 234 5678</a>
+        <a href="contact.html" class="btn btn-ghost btn-sm">Get Started</a>
+      </div>
+      <button class="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <a href="flights.html">Flights</a>
+  <a href="hotels.html">Hotels</a>
+  <a href="packages.html">Packages</a>
+  <a href="visa.html">Visa</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-gold">Get Started</a>
+</div>
+
+<section class="hero" id="book">
+  <div class="hero-bg"><div class="glow"></div><div class="photo"></div></div>
+  <div class="container hero-content">
+    <div class="hero-top reveal in">
+      <span class="eyebrow">Lagos · London · Dubai · Beyond</span>
+      <h1>Travel like royalty,<br>arrive with <em>ease</em>.</h1>
+      <p class="lede">D'Royals Travels &amp; Tours is your private booking desk for flights, hotels and holiday packages — curated with the care of a personal concierge, priced for the everyday traveller.</p>
+    </div>
+
+    <form class="widget reveal in" id="home-search">
+      <div class="widget-tabs">
+        <button type="button" class="active" data-tab="flights">Flights</button>
+        <button type="button" data-tab="hotels">Hotels</button>
+        <button type="button" data-tab="tours">Packages</button>
+        <button type="button" data-tab="visa">Visa</button>
+      </div>
+
+      <div class="widget-body" data-panel="flights">
+        <div class="trip-toggle">
+          <label><input type="radio" name="trip" checked> Round trip</label>
+          <label><input type="radio" name="trip"> One way</label>
+          <label><input type="radio" name="trip"> Multi-city</label>
+        </div>
+        <div class="widget-grid">
+          <div class="field">
+            <label>From</label>
+            <input type="text" id="home-from" placeholder="Lagos (LOS)" value="Lagos (LOS)" autocomplete="off">
+            <div class="ac-list" id="home-from-list"></div>
+          </div>
+          <div class="field">
+            <label>To</label>
+            <input type="text" id="home-to" placeholder="Where to?" autocomplete="off">
+            <div class="ac-list" id="home-to-list"></div>
+          </div>
+          <div class="field">
+            <label>Depart</label>
+            <input type="date" id="home-depart">
+          </div>
+          <div class="field">
+            <label>Return</label>
+            <input type="date" id="home-return">
+          </div>
+          <div class="field">
+            <label>Travellers</label>
+            <select id="home-cabin">
+              <option>Economy</option>
+              <option>Premium Economy</option>
+              <option>Business</option>
+              <option>First Class</option>
+            </select>
+          </div>
+          <button type="submit" class="widget-search">Search</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="trust-inline reveal in">
+      <div><strong>50k+</strong>Travellers served</div>
+      <div><strong>120+</strong>Destinations covered</div>
+      <div><strong>24/7</strong>Concierge support</div>
+      <div><strong>IATA</strong>Accredited agency</div>
+    </div>
+  </div>
+</section>
+
+<section id="destinations">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Signature Destinations</span>
+        <h2>Where our travellers are<br>booking this season</h2>
+      </div>
+      <p>From weekend city breaks to once-in-a-lifetime honeymoons — every route is one we've booked before, so you don't book blind.</p>
+    </div>
+    <div class="dest-grid" id="home-destinations"></div>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Full Service Desk</span>
+        <h2>Everything your journey<br>needs, under one roof</h2>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="num">01</span>
+        <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 12l7-7v4h13v6H9v4z"/></svg></div>
+        <h3>Flight Booking</h3>
+        <p>Compare fares across 10+ airlines and lock in economy, business or first class seats.</p>
+        <a class="more" href="flights.html">Search flights →</a>
+      </div>
+      <div class="service-card reveal">
+        <span class="num">02</span>
+        <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Hotel Reservations</h3>
+        <p>Hand-vetted stays, from boutique hotels to five-star resorts, with flexible cancellation.</p>
+        <a class="more" href="hotels.html">Search hotels →</a>
+      </div>
+      <div class="service-card reveal">
+        <span class="num">03</span>
+        <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 3a13 13 0 000 18 13 13 0 000-18z"/><path d="M3 12h18"/></svg></div>
+        <h3>Holiday Packages</h3>
+        <p>Fully-planned itineraries — flights, stays, tours and transfers bundled into one price.</p>
+        <a class="more" href="packages.html">Browse packages →</a>
+      </div>
+      <div class="service-card reveal">
+        <span class="num">04</span>
+        <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+        <h3>Visa Assistance</h3>
+        <p>Document checklists, appointment booking and application tracking for major embassies.</p>
+        <a class="more" href="visa.html">Start visa enquiry →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Featured Package</span>
+        <h2>This month's curated escape</h2>
+      </div>
+      <a href="packages.html" class="btn btn-ghost btn-sm">View all packages</a>
+    </div>
+    <div class="spotlight reveal">
+      <div class="spotlight-img">
+        <span class="spotlight-tag">7 Nights · All-Inclusive</span>
+        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1000&q=80" alt="Santorini caldera villa at sunset">
+      </div>
+      <div class="spotlight-body">
+        <span class="eyebrow">Greek Islands</span>
+        <h3>Santorini Honeymoon Escape</h3>
+        <p>Caldera-view suite, private sunset dinner in Oia, catamaran cruise and airport-to-hotel transfers — planned start to finish by our travel desk.</p>
+        <ul class="spotlight-list">
+          <li><span class="k">Flights</span> Lagos → Athens → Santorini, return</li>
+          <li><span class="k">Stay</span> 7 nights, caldera-view suite, breakfast included</li>
+          <li><span class="k">Extras</span> Sunset catamaran cruise, private dinner, transfers</li>
+        </ul>
+        <div class="spotlight-price">
+          <span class="from">From</span>
+          <span class="amount">₦2,180,000</span>
+          <span class="per">/ per couple</span>
+        </div>
+        <a href="packages.html#santorini" class="btn btn-gold" style="align-self:flex-start;">Reserve This Package</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="why-wrap">
+      <div>
+        <span class="eyebrow">Why D'Royals</span>
+        <h2 style="margin-top:14px;">Booking travel shouldn't feel like a gamble</h2>
+        <div class="why-list">
+          <div class="why-item reveal">
+            <span class="why-num">01</span>
+            <div><h4>Real agents, not just a search box</h4><p>Every itinerary is checked by a human travel consultant before it reaches you.</p></div>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-num">02</span>
+            <div><h4>Transparent pricing, no surprise fees</h4><p>The fare you're quoted includes taxes and service charges.</p></div>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-num">03</span>
+            <div><h4>Flexible payment plans</h4><p>Spread the cost of flights and packages with instalment options that fit your budget.</p></div>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-num">04</span>
+            <div><h4>24/7 support, even mid-trip</h4><p>Flight delayed or plans changed? Reach a live agent any hour, any day.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual reveal">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=75" alt="Traveller with luggage at airport">
+        <div class="why-badge">
+          <div class="seal" style="flex-shrink:0;"><span>DR</span></div>
+          <div><strong>15 yrs</strong><span>Trusted by travellers across West Africa &amp; the diaspora</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="test-strip">
+  <div class="container" style="padding-top:90px; padding-bottom:90px;">
+    <div class="section-head" style="margin-bottom:44px;">
+      <div><span class="eyebrow">In Their Words</span><h2>Trusted by frequent flyers</h2></div>
+    </div>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <span class="test-mark">"</span>
+      <p class="quote">Booked a family trip to London in one call. No hidden charges, and they even sorted our visa appointments.</p>
+      <div class="test-person"><div class="test-avatar"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop" alt=""></div><div><strong>Adaeze N.</strong><span>Lagos, Nigeria</span></div></div>
+    </div>
+    <div class="test-card reveal">
+      <span class="test-mark">"</span>
+      <p class="quote">My flight got rescheduled at midnight and their support desk had me rebooked before I'd even finished panicking.</p>
+      <div class="test-person"><div class="test-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt=""></div><div><strong>Tunde A.</strong><span>Abuja, Nigeria</span></div></div>
+    </div>
+    <div class="test-card reveal">
+      <span class="test-mark">"</span>
+      <p class="quote">The Zanzibar package was better value than anything I found booking it myself, and way less stressful.</p>
+      <div class="test-person"><div class="test-avatar"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop" alt=""></div><div><strong>Ifeoma K.</strong><span>Port Harcourt, Nigeria</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div class="seal"><span>DR</span></div>
+    <h2>Join the Royal Circle</h2>
+    <p>Fare drops, seasonal packages and visa deadline reminders — sent only when they're worth your time.</p>
+    <form class="cta-form" id="newsletter-form" data-lead-type="newsletter">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="cta-fine">No spam. Unsubscribe anytime in one click.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head" style="justify-content:center; text-align:center;">
+      <div style="margin:0 auto;"><span class="eyebrow" style="justify-content:center;">Questions</span><h2 style="margin-top:14px;">Frequently asked questions</h2></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q"><h4>How do I book a flight through D'Royals?</h4><span class="icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Use the search widget above to see sample fares for your route, then submit an enquiry — an agent confirms the live fare, holds your seat and sends secure payment options before anything is charged.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h4>Can I pay in instalments?</h4><span class="icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Yes — most flights and holiday packages support a "pay small small" plan. Your seat is secured with a deposit, and the balance is spread over a schedule agreed with your agent.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h4>Do you help with visa applications?</h4><span class="icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Our visa desk prepares your document checklist, books your embassy or VFS appointment, and tracks your application status until a decision is made.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h4>Is D'Royals accredited?</h4><span class="icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Yes, D'Royals Travels &amp; Tours is an IATA-recognised travel agency, and every booking is backed by verified airline and hotel partnerships.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="seal"><span>DR</span></div>
+          <div><div class="brand-name">D'<em>Royals</em></div><span class="brand-sub">Travels &amp; Tours</span></div>
+        </div>
+        <p>Your private booking desk for flights, hotels, holiday packages and visa support — proudly Lagos-based, serving the world.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="X / Twitter">X</a>
+          <a href="https://wa.me/2348012345678" aria-label="WhatsApp" target="_blank" rel="noopener">WA</a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Book</h5>
+        <a href="flights.html">Flights</a><a href="hotels.html">Hotels</a><a href="packages.html">Holiday Packages</a><a href="visa.html">Visa Services</a>
+      </div>
+      <div class="footer-col"><h5>Company</h5>
+        <a href="about.html">About Us</a><a href="about.html#team">Our Team</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col"><h5>Support</h5>
+        <a href="contact.html">Help Centre</a><a href="contact.html">Manage Booking</a><a href="visa.html">Visa Support</a>
+      </div>
+      <div class="footer-col"><h5>Reach Us</h5>
+        <a href="tel:+2348012345678">+234 801 234 5678</a>
+        <a href="mailto:fly@droyalstravels.com">fly@droyalstravels.com</a>
+        <li style="color:var(--muted); margin-bottom:0;">12 Adeola Odeku St, Victoria Island, Lagos</li>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 D'Royals Travels &amp; Tours. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/2348012345678" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.44 1.32 4.94L2 22l5.29-1.39a9.9 9.9 0 004.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2zm0 18.06a8.2 8.2 0 01-4.18-1.14l-.3-.18-3.14.82.84-3.06-.2-.31a8.18 8.18 0 01-1.26-4.37c0-4.52 3.68-8.2 8.24-8.2 4.55 0 8.24 3.68 8.24 8.2 0 4.53-3.69 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.36-.77-1.86-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.86-.87 2.09 0 1.23.9 2.42 1.02 2.59.12.17 1.77 2.72 4.29 3.81.6.26 1.07.42 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="assets/main.js"></script>
+<script>
+  // ---- Widget tabs on home page (route to the right page) ----
+  document.querySelectorAll('.widget-tabs button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.widget-tabs button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const tab = btn.dataset.tab;
+      if(tab === 'hotels') window.location.href = 'hotels.html';
+      else if(tab === 'tours') window.location.href = 'packages.html';
+      else if(tab === 'visa') window.location.href = 'visa.html';
+    });
+  });
+
+  DR.initAutocomplete(document.getElementById('home-from'), document.getElementById('home-from-list'));
+  DR.initAutocomplete(document.getElementById('home-to'), document.getElementById('home-to-list'));
+
+  document.getElementById('home-search').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const from = document.getElementById('home-from').dataset.code || 'LOS';
+    const to = document.getElementById('home-to').dataset.code || '';
+    const depart = document.getElementById('home-depart').value;
+    const ret = document.getElementById('home-return').value;
+    const cabin = document.getElementById('home-cabin').value;
+    const params = new URLSearchParams({from, to, depart, ret, cabin});
+    window.location.href = 'flights.html?' + params.toString();
+  });
+
+  // ---- Render destination grid from shared data ----
+  const destGrid = document.getElementById('home-destinations');
+  destGrid.innerHTML = DR.DESTINATIONS.slice(0,6).map(d => `
+    <a class="dest-card reveal" href="hotels.html?city=${encodeURIComponent(d.city)}">
+      <img src="${d.img}" alt="${d.city} skyline">
+      <div class="dest-info">
+        <div class="dest-count">${d.hotels}+ hotels</div>
+        <h3>${d.city}</h3>
+        <span class="country">${d.country}</span>
+      </div>
+    </a>
+  `).join('');
+  document.querySelectorAll('#home-destinations .dest-card').forEach(el=>{
+    // re-init reveal for dynamically injected cards
+    el.classList.add('in');
+  });
+
+  DR.initLeadForm(document.getElementById('newsletter-form'));
+  document.getElementById('newsletter-form').addEventListener('submit', function(){
+    setTimeout(()=>{ this.querySelector('button').textContent = 'Subscribed ✓'; }, 750);
+  });
+</script>
+</body>
+</html>
