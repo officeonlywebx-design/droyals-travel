@@ -19,8 +19,11 @@
   --gold:#f2b511;
   --gold-light:#ffd968;
 
-  --brand-gradient: linear-gradient(120deg, var(--blue-bright) 0%, var(--blue) 38%, var(--gold) 100%);
-  --brand-gradient-soft: linear-gradient(135deg, rgba(58,102,255,.16), rgba(242,181,17,.14));
+  /* Golden yellow gradient — this IS the "brand-gradient": light gold to deep gold, no blue mixed in */
+  --brand-gradient: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 55%, var(--gold-deep) 100%);
+  --brand-gradient-soft: linear-gradient(135deg, rgba(242,181,17,.16), rgba(169,122,6,.12));
+  /* Royal blue stays a solid brand color, used on its own (not blended into the gradient) */
+  --royal-blue: var(--blue);
 
   --ivory:#f6f1e7;
   --ivory-dim:#d8d2c3;
@@ -59,11 +62,11 @@ h1,h2,h3,h4{font-family:'Fraunces',serif; font-weight:500; letter-spacing:-0.01e
 /* ---------- SEAL LOGO ---------- */
 .seal{
   width:40px;height:40px; border-radius:50%;
-  background:var(--brand-gradient);
+  background:var(--royal-blue);
+  border:1.5px solid var(--gold);
   display:flex;align-items:center;justify-content:center; position:relative; flex-shrink:0;
-  padding:1.5px;
+  box-shadow:0 0 0 3px rgba(33,72,201,.14);
 }
-.seal::before{content:"";position:absolute; inset:1.5px; border-radius:50%; background:var(--ink);}
 .seal span{position:relative; z-index:2; font-family:'Fraunces',serif; font-style:italic; font-size:14px; color:var(--gold-light); font-weight:600;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand-name{font-family:'Fraunces',serif; font-size:19px; color:var(--ivory); letter-spacing:0.01em;}
